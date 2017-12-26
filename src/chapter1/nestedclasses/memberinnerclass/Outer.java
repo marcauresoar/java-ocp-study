@@ -14,8 +14,14 @@ public class Outer {
         Inner inner = new Inner();
         inner.go();
     }
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         Outer outer = new Outer();
         outer.callInner();
+    }*/
+    public static void main(String[] args) {
+        Outer outer = new Outer();
+        Inner inner = outer.new Inner(); // create the inner class
+        inner.go();
     }
+
 }
